@@ -1,0 +1,88 @@
+{
+  "CO": [
+    "Medellín",
+    "Bogotá",
+    "Pereira",
+    "Barranquilla",
+    "Buenaventura",
+    "Santa Marta",
+    "Villavicencio",
+    "Bucaramanga",
+    "Cali",
+    "Cartagena"
+  ],
+  "US": [
+    "Nueva York",
+    "Los Angeles",
+    "Chicago",
+    "Houston",
+    "Phoenix",
+    "Philadelphia",
+    "San Antonio",
+    "San Diego",
+    "Dallas",
+    "Jacksonville"
+  ],
+  "AR" : [
+    "Buenos Aires",
+    "Córdoba",
+    "Rosario",
+    "Mendoza",
+    "La Plata",
+    "San Miguel de Tucumán",
+    "Mar del Plata",
+    "Salta",
+    "Santa Fe",
+    "San Juan"
+  ],
+  "CR" : [
+    "Bagaces",
+    "La Cruz",
+    "Limón",
+    "San Carlos",
+    "Santa Bárbara",
+    "Dota",
+    "Cartago",
+    "Cañas",
+    "Parrita",
+    "Nicoya"
+  ],
+  "ES" : [
+    "Barcelona",
+    "Madrid",
+    "Valencia",
+    "Sevilla",
+    "Zaragoza",
+    "Bilbao",
+    "Málaga",
+    "Palma",
+    "Granada",
+    "Santander"
+  ], 
+  "MX" : [
+    "Ciudad de México",
+    "Monterrey",
+    "Guadalajara",
+    "Cancún",
+    "Oaxaca de Juárez",
+    "Veracruz",
+    "Taxco",
+    "Guanajuato",
+    "Tequila",
+    "Puerto Vallarta"
+  ],
+  "PE" : [
+    "Lima",
+    "Cusco",
+    "Ayacucho",
+    "Piura",
+    "Arequipa",
+    "Iquitos",
+    "Trujillo",
+    "Junín",
+    "Tumbes",
+    "Puno"
+  ]
+
+
+}
