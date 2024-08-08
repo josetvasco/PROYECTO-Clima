@@ -1,10 +1,35 @@
 const container = document.querySelector('.container');
 const resultado = document.querySelector('#resultado');
 const formulario = document.querySelector('#formulario');
+const paisSelect = document.querySelector('#pais');
+const selectCiudad = document.querySelector('#ciudad');
 
 window.addEventListener('load', () => {
   formulario.addEventListener('submit', buscarClima);
 })
+
+paisSelect.addEventListener('change', consultarJSON);
+
+function consultarJSON() {
+  fetch('db/ciudades.json')
+    .then( respuesta => respuesta.json() )
+    .then( paises => llenarSelectCiudades(paises) )
+}
+
+function llenarSelectCiudades( paises ) {
+  for(const [key, value] of Object.entries(paises)){
+    if ( key === paisSelect.value) {
+      selectCiudad.innerHTML = ``;
+
+      paises[key].forEach( ciudad => {
+        const option = document.createElement('OPTION');
+        option.setAttribute('value', ciudad);
+        option.textContent = ciudad;
+        selectCiudad.appendChild(option);
+      });
+    }
+  }
+}
 
 function buscarClima(e) {
   e.preventDefault();
@@ -18,7 +43,6 @@ function buscarClima(e) {
 
   if( ciudad === '' || pais === '' ) {
     mostrarError('Ambos campos son obligatorios');
-
     return;
   }
 
@@ -54,8 +78,5 @@ function consultarAPI(ciudad, pais) {
     .then( respuesta => respuesta.json())
     .then( datos => {
       console.log(datos)
-      if( datos.cod === "404") {
-        mostrarError('Ciudad no encontrada');
-      }
     })
 }
