@@ -77,6 +77,30 @@ function consultarAPI(ciudad, pais) {
   fetch(url)
     .then( respuesta => respuesta.json())
     .then( datos => {
-      console.log(datos)
+      //Imprime la respuesta en el HTML
+      mostrarClima(datos);
     })
+}
+
+function mostrarClima(datos) {
+  limpiarHTML();
+
+  const { main: { temp, temp_max, temp_min } } = datos;
+  const centigrados = Math.round(temp - 273.15);
+
+  const actual = document.createElement('P');
+  actual.innerHTML = `${centigrados} &#8451;`;
+  actual.classList.add('font-bold', 'text-6xl');
+
+  const resultadoDiv = document.createElement('DIV');
+  resultadoDiv.classList.add('text-center', 'text-white');
+  resultadoDiv.appendChild(actual);
+
+  resultado.appendChild(resultadoDiv);
+}
+
+function limpiarHTML() {
+  while(resultado.firstChild) {
+    resultado.removeChild(resultado.firstChild);
+  }
 }
